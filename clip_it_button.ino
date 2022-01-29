@@ -103,6 +103,7 @@ POST https://id.twitch.tv/oauth2/token
 //get broadcaster_id of the stream we want to clip
 //my assumption is that the get token permission and broadcaster ID doesn't have to happen every time the button is pressed; just once on setup
 
+//       create the clip - this is probably all that needs to happen here
 //  https://dev.twitch.tv/docs/api/reference#create-clip
 
       
