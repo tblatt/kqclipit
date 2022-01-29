@@ -98,7 +98,7 @@ POST https://id.twitch.tv/oauth2/token
     ?client_id=2t1dxamtziy18rxa600cozvr7a78lj
     &client_secret=u063sibrt3j0ip4nubif5dri0vezg2
     &grant_type=client_credentials
-    &scope=<space-separated list of scopes>;
+    &scope=clips:edit;
 
 //get broadcaster_id of the stream we want to clip
 //my assumption is that the get token permission and broadcaster ID doesn't have to happen every time the button is pressed; just once on setup
