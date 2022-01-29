@@ -78,27 +78,40 @@ void loop() {
 buttonState = digitalRead(buttonPin);
 
   // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
-  if (buttonState == LOW) {
+  if (buttonState == HIGH) {
         digitalWrite(LED_BUILTIN, HIGH);
         Serial.println("Button Pressed!");
-        delay(200);
+        delay(100);
         digitalWrite(LED_BUILTIN, LOW);    
-        delay(200);
+        delay(100);
         digitalWrite(LED_BUILTIN, HIGH);
-        delay(200);
+        delay(100);
         digitalWrite(LED_BUILTIN, LOW);
-        delay(200);
+        delay(100);
         digitalWrite(LED_BUILTIN, HIGH);
 
 //add the twitch stuff here
 
-  
+//get a token for permissions
+//https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/?fbclid=IwAR1W3UB8-wtlMaBPu_6g6KZIiVDKwEfv9Y5dVomKNr524fyUfbnFHrI0lbg#oauth-client-credentials-flow
+POST https://id.twitch.tv/oauth2/token
+    ?client_id=2t1dxamtziy18rxa600cozvr7a78lj
+    &client_secret=u063sibrt3j0ip4nubif5dri0vezg2
+    &grant_type=client_credentials
+    &scope=<space-separated list of scopes>;
+
+//get broadcaster_id of the stream we want to clip
+//my assumption is that the get token permission and broadcaster ID doesn't have to happen every time the button is pressed; just once on setup
+
+//create the clip - this is probably all that needs to happen here
+//  https://dev.twitch.tv/docs/api/reference#create-clip
 
       
     }
-  
-  else
+    else
   {
+    //this is what's happening when the button isn't being pressed
+    
     Serial.println(".");
   }
   }
