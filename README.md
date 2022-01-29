@@ -8,3 +8,11 @@ the button will send commands to twitch to make a twitch clip of whatever just h
 we havea  private/public key from twitter oauth to use the twitter api. users will need to have their own twitch account so the clips get saved to that account. 
 
 How does the button know which stream to capture? not sure
+
+
+1/4" plywood lasercut files
+use the big 50mm arcade button
+nodemcu esp8266 1.0 12E
+wire 10k ohm resistor from pin 14 to ground
+wire 5v/3.3v to button, other lead to pin 14.
+button should be Normally Open
